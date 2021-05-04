@@ -3,7 +3,7 @@ Work Sample
 
 ## Local install directions
 
-Download or clone the repository onto your local machine from `here`.
+Download or clone the repository onto your local machine from https://github.com/tosterberg/work-sample.
 - You will also need node.js for both the backend and the node package manager.  Instructions on their installation can be found here https://nodejs.org/en/.  You will then run `npm install` which will download the required dependencies.
 - Starting the development code will require you to run `npm run-script dev` in the command line while in the project root directory. You will get the following prompt in your console.  Source code can be found in `./src/`.
 ```
