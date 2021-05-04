@@ -89,7 +89,7 @@ const RecursiveAsyncReadLine = (): void => {
                     console.log(') closing...');
                     process.exit(0);
                 default:
-                    console.log(') ERROR: Input was not a recognized command');
+                    console.log(') ERROR: Input is not a recognized command');
                     break;
                 }
             } else {
@@ -100,5 +100,5 @@ const RecursiveAsyncReadLine = (): void => {
 }
 
 /** Command line entry point for stdio */
-console.log('Work Sample for Tyler Osterberg has started...');
+console.log('Work sample from Tyler Osterberg has started...');
 RecursiveAsyncReadLine();

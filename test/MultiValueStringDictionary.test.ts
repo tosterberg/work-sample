@@ -36,8 +36,11 @@ describe('MultiValueStringDictionary', function(){
     });
 
     it('dictionary remove key value pair should fail when key value pair does not exist', function(){
-        assert.equal(dict.removeValueAtKey('foo','bar'), dict.VALUEDOESNOTEXIST);
+        assert.equal(dict.removeValueAtKey('foo','bar'), dict.KEYDOESNOTEXIST);
         assert.equal(dict.size(), 0);
+        assert.equal(dict.addKeyValue('foo','bar'), dict.ADDED);
+        assert.equal(dict.size(), 1);
+        assert.equal(dict.removeValueAtKey('foo','baz'), dict.VALUEDOESNOTEXIST);
         assert.equal(dict.clearDictionary(), dict.CLEARED);
     });
 

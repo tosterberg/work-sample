@@ -4,10 +4,10 @@ Work Sample
 ## Local install directions
 
 Download or clone the repository onto your local machine from https://github.com/tosterberg/work-sample.
-- You will also need node.js for both the backend and the node package manager.  Instructions on their installation can be found here https://nodejs.org/en/.  You will then run `npm install` which will download the required dependencies.
+- You will also need node.js and the node package manager.  Instructions on their installation can be found here https://nodejs.org/en/.  You will then run `npm install` which will download the required dependencies.
 - Starting the development code will require you to run `npm run-script dev` in the command line while in the project root directory. You will get the following prompt in your console.  Source code can be found in `./src/`.
 ```
-Work sample for Tyler Osterberg has started...
+Work sample from Tyler Osterberg has started...
 >
 ```
 - Starting the development code will require you to run `npm run-script test` in the command line while in the project root directory.  You should get the following response in your console.  Testing was done using Mocha and Chai, and testing source code can be found in `./test/`
@@ -29,7 +29,7 @@ MultiValueStringDictionary
 ```
 
 ### Commands and functionality - Reference Work Sample.md
-The Multi-Value Dictionary app is a command line application that stores a multivalue dictionary in memory.  All keys and values are strings.
+The Multi-Value Dictionary app is a command line application that stores a multi-value dictionary in memory.  All keys and values are strings.
 
 It should support the following commands.
 

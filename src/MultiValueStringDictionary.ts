@@ -13,8 +13,8 @@ export default class MultiValueStringDictionary implements IKeyCollection<string
     public ADDED: string = ') Added';
     public REMOVED: string = ') Removed';
     public CLEARED: string = ') Cleared';
-    public TRUE: string = ') True';
-    public FALSE: string = ') False';
+    public TRUE: string = ') true';
+    public FALSE: string = ') false';
     public EMPTY: string = '(empty set)';
 
     /** Add a key value pair and return logging message */
@@ -75,10 +75,6 @@ export default class MultiValueStringDictionary implements IKeyCollection<string
 
     getValuesAtKey(key: string): string {
         return this.items[key].toString();
-    }
-
-    getAllKeysAndValues(): any {
-        return this.items;
     }
 
     /** Log all keys to console */
@@ -150,7 +146,9 @@ export default class MultiValueStringDictionary implements IKeyCollection<string
     }
 
     removeValueAtKey(key: string, value: string): string{
-        if(this.containsValue(key, value)){
+        if(!this.containsKey(key)){
+            return this.KEYDOESNOTEXIST;
+        } else if(this.containsValue(key, value)){
             /** Arrow function with filter returns a new array without value in it */
             this.items[key] = this.items[key].filter((test: string) => {
                 return test !== value;
@@ -161,7 +159,6 @@ export default class MultiValueStringDictionary implements IKeyCollection<string
         } else {
             return this.VALUEDOESNOTEXIST;
         }
-
     }
 
     removeKeyWithValues(key: string): string {
