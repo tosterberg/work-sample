@@ -18,9 +18,9 @@ MultiValueStringDictionary
   √ dictionary add key value pair should insert into dictionary
   √ dictionary add key value pair should error when key pair already exists
   √ dictionary remove key value pair should remove from dictionary
-  √ dictionary remove key value pair should fail when key value pair does not exist
+  √ dictionary remove key value pair should error when key value pair does not exist
   √ dictionary remove all from key should remove from dictionary
-  √ dictionary remove all from key should fail if key does not exist
+  √ dictionary remove all from key should error if key does not exist
   √ dictionary does key exist should return truth
   √ dictionary does key value pair exist should return truth
 

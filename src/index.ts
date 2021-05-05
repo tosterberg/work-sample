@@ -35,28 +35,28 @@ const RecursiveAsyncReadLine = (): void => {
                     dict.printAllKeys();
                     break;
                 case 'MEMBERS':
-                    if(commands.length < 2){
+                    if(commands.length === 2){
                         console.log(') ERROR: MEMBERS expects another parameter, a key.');
                     } else {
                         dict.printMemberValues(commands[1]);
                     }
                     break;
                 case 'ADD':
-                    if(commands.length < 3){
+                    if(commands.length === 3){
                         console.log(') ERROR: ADD expects two parameters, a key and a value.');
                     } else {
                         console.log(dict.addKeyValue(commands[1], commands[2]));
                     }
                     break;
                 case 'REMOVE':
-                    if(commands.length < 3){
+                    if(commands.length === 3){
                         console.log(') ERROR: Remove expects two parameters, a key and a value.');
                     } else {
                         console.log(dict.removeValueAtKey(commands[1], commands[2]));
                     }
                     break;
                 case 'REMOVEALL':
-                    if(commands.length < 2){
+                    if(commands.length === 2){
                         console.log(') ERROR: Remove expects one parameter, a key.');
                     } else {
                         console.log(dict.removeKeyWithValues(commands[1]));
@@ -66,14 +66,14 @@ const RecursiveAsyncReadLine = (): void => {
                     console.log(dict.clearDictionary());
                     break;
                 case 'KEYEXISTS':
-                    if(commands.length < 2){
+                    if(commands.length === 2){
                         console.log(') ERROR: Keyexists expects one parameter, a key.');
                     } else {
                         console.log(dict.doesKeyExist(commands[1]));
                     }
                     break;
                 case 'VALUEEXISTS':
-                    if(commands.length < 3){
+                    if(commands.length === 3){
                         console.log(') ERROR: Valueexists expects two parameters, a key and a value.');
                     } else {
                         console.log(dict.doesValueExist(commands[1], commands[2]));

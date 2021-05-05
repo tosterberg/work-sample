@@ -35,7 +35,7 @@ describe('MultiValueStringDictionary', function(){
         assert.equal(dict.clearDictionary(), dict.CLEARED);
     });
 
-    it('dictionary remove key value pair should fail when key value pair does not exist', function(){
+    it('dictionary remove key value pair should error when key value pair does not exist', function(){
         assert.equal(dict.removeValueAtKey('foo','bar'), dict.KEYDOESNOTEXIST);
         assert.equal(dict.size(), 0);
         assert.equal(dict.addKeyValue('foo','bar'), dict.ADDED);
@@ -54,7 +54,7 @@ describe('MultiValueStringDictionary', function(){
         assert.equal(dict.clearDictionary(), dict.CLEARED);
     });
 
-    it('dictionary remove all from key should fail if key does not exist', function(){
+    it('dictionary remove all from key should error if key does not exist', function(){
         assert.equal(dict.removeKeyWithValues('foo'), dict.KEYDOESNOTEXIST);
         assert.equal(dict.size(), 0);
         assert.equal(dict.clearDictionary(), dict.CLEARED);
